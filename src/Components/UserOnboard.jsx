@@ -20,7 +20,7 @@ const UserOnboard = () => {
     localStorage.setItem('hasUserOnboarded', true);
   };
 
-  console.log(userName);
+  console.log('user', userName);
   return (
     <Box>
       <Flex direction={'column'} gap={'4'} alignItems={'center'} maxW={'30rem'}>
