@@ -1,6 +1,8 @@
 import React from 'react';
-import { ChakraProvider, theme } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
+
 import Clock from './Components/Clock';
+import theme from './theme';
 
 function App() {
   return (
