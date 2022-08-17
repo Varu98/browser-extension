@@ -46,11 +46,11 @@ const Weather = () => {
   return loading ? (
     <Box
       position={'absolute'}
-      top={'6'}
-      right={'6'}
+      top={['0', '6']}
+      right={['0', '6']}
       maxwidth={['10rem', '20rem']}
-      padding="6"
-      boxShadow="lg"
+      padding={['1', '6']}
+      boxShadow="l"
       spacing={2}
     >
       <SkeletonCircle size="10" />
@@ -58,28 +58,30 @@ const Weather = () => {
     </Box>
   ) : (
     <VStack
-      p={[0, 8]}
+      p={[4, 8]}
       position={'absolute'}
-      top={'6'}
-      right={'6'}
+      top={['0', '6']}
+      right={['0', '6']}
       borderRadius="5px"
-      mt={[16, 0]}
+      mt={[0, 0]}
       maxwidth={['10rem', '20rem']}
     >
       <HStack>
-        <Heading>{apiLocation.name} </Heading>
+        <Heading fontSize={{ sm: '1rem' }}>{apiLocation.name} </Heading>
         <Box as={'span'}>
           <Image
-            width={'5rem'}
+            width={['3rem', '5rem']}
             src={`https://openweathermap.org/img/wn/${apiLocation.weather[0].icon}@2x.png`}
           />
         </Box>
       </HStack>
 
       <VStack>
-        <Text fontSize={'1.5rem'}>{apiLocation.weather[0].description}</Text>
+        <Text fontSize={['1rem', '1.5rem']}>
+          {apiLocation.weather[0].description}
+        </Text>
       </VStack>
-      <Box fontSize={'1.5rem'} as="span">
+      <Box fontSize={['1rem', '1.5rem']} as="span">
         {'🌡 '}
         {apiLocation.main.feels_like} C
       </Box>

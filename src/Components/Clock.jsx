@@ -49,7 +49,11 @@ const Clock = () => {
         {userName.hasUserOnboarded ? (
           <VStack>
             <Weather />
-            <Heading mt={[0, '10rem']} fontSize={['3rem', '5rem', '10rem']}>
+            <Heading
+              mt={['10rem', '10rem']}
+              mb={['10rem', '0']}
+              fontSize={['2rem', '5rem', '10rem']}
+            >
               {clock}
             </Heading>
             <Greeting />
